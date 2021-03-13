@@ -1,0 +1,12 @@
+{
+  "header": {
+    "projects": "Projektek",
+    "services": "Szolgáltatások",
+    "contact": "Kapcsolat"
+  },
+  "welcome": {
+    "title": "Bringing life to the interior",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a dictum mauris, a elementum nunc. Integer fringilla euismod sem eget laoreet. Suspendisse est ipsum, pretium vitae eros id, fringilla mollis velit.",
+    "cta": "create a project"
+  }
+}

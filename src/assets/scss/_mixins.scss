@@ -1,0 +1,15 @@
+@import 'variables';
+
+@mixin media-breakpoint-up($name) {
+  $breakpoint: map-get($breakpoints, $name);
+
+  @if $breakpoint {
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  }
+
+  @else {
+    @content;
+  }
+}
