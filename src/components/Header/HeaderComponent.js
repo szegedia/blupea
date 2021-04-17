@@ -64,43 +64,6 @@ const HeaderComponent = () => {
         </ul>
       </div>
     </nav>
-    // <nav className="fixed">
-    //   <a href="#brand" onClick={handleScrollTop}>blupea</a>
-
-    //   <button onClick={handleToggleCollapse}>[]</button>
-
-    //   <div>
-    //     <ul>
-    //       <li>
-    //         <Link
-    //           to="projects"
-    //           offset={headerOffset}
-    //           smooth
-    //         >
-    //           {t('header.projects')}
-    //         </Link>
-    //       </li>
-    //       <li>
-    //         <Link
-    //           to="services"
-    //           offset={headerOffset}
-    //           smooth
-    //         >
-    //           {t('header.services')}
-    //         </Link>
-    //       </li>
-    //       <li>
-    //         <Link
-    //           to="contact"
-    //           offset={headerOffset}
-    //           smooth
-    //         >
-    //           {t('header.contact')}
-    //         </Link>
-    //       </li>
-    //     </ul>
-    //   </div>
-    // </nav>
   )
 }
 
