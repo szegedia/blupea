@@ -1,38 +1,27 @@
+import { graphql } from "gatsby"
 import * as React from 'react'
-import { useTranslation } from 'react-i18next'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import Layout from '@components/Layout/LayoutComponent'
+import styles from './Welcome.module.css'
 
-const WelcomeComponent = () => {
-  const { t } = useTranslation()
+const WelcomeComponent = ({ images }) => {
+  const carouselRef = React.useRef()
+  const resetAutoplay = () => {
+    clearInterval(carouselRef.current.autoPlay)
+    carouselRef.current.autoPlay = setInterval(carouselRef.current.next, carouselRef.current.props.autoPlaySpeed)
+  }
   const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 1
-    },
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1
+      breakpoint: { max: 4000, min: 1024 },
+      items: 1,
+      partialVisibilityGutter: 100,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 1024, min: 0 },
       items: 1
     }
   };
-
-  const ButtonGroup = ({ next, previous }) => {
-    return (
-      <div className="absolute z-10 right-0 bottom-0">
-        <button className="px-20 py-3 text-white bg-black bg-opacity-80" onClick={previous}>prev</button>
-        <button className="px-20 py-3 text-white bg-black bg-opacity-80" onClick={next}>next</button>
-      </div>
-    )
-  }
 
   return (
     <Layout className="flex flex-col relative w-full mt-8 md:items-end md:mt-40">
@@ -49,18 +38,27 @@ const WelcomeComponent = () => {
         </button>
       </section>
       <section className="md:w-2/3">
-        <Carousel
-          responsive={responsive}
-          autoPlaySpeed={5000}
-          arrows={false}
-          customButtonGroup={<ButtonGroup />}
-          removeArrowOnDeviceType={['tablet', 'mobile']}
-          autoPlay
-          infinite
-        >
-          <img src="https://amardesign.eu/wp-content/uploads/2018/12/Cadre_Down_165.jpg" alt="" />
-          <img src="https://amardesign.eu/wp-content/uploads/2018/12/Cadre_Down_165.jpg" alt="" />
-        </Carousel>
+        {images?.length && (
+          <Carousel
+            ref={el => carouselRef.current = el}
+            responsive={responsive}
+            autoPlaySpeed={5000}
+            itemClass={styles.mainSliderImageItem}
+            removeArrowOnDeviceType={['tablet', 'mobile']}
+            additionalTransfrom={-80}
+            beforeChange={resetAutoplay}
+            partialVisible
+            arrows={false}
+            showDots
+            autoPlay
+            infinite
+            focusOnSelect
+          >
+            {images.map((image, index) => (
+              <img key={`welcome-${index}`} src={image} title={index} alt="" />
+            ))}
+          </Carousel>
+        )}
       </section>
     </Layout>
   )
