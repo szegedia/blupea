@@ -82,11 +82,7 @@
 
 @layer components {
   .cta {
-    @apply border border-gray-800 px-24 py-6 font-semibold uppercase w-full text-center sm:w-auto;
-  }
-
-  .cta.is-filled {
-    @apply bg-black border-none text-white px-12 py-6 w-auto outline-none disabled:opacity-50;
+    @apply border border-gray-800 px-24 py-6 font-semibold uppercase w-full text-center focus:outline-none sm:w-auto disabled:opacity-75;
   }
 
   .form-item {

@@ -1,5 +1,10 @@
+.mainCarousel {
+  height: 35rem;
+}
+
 .mainCarouselItem {
   height: 35rem;
+  margin: 0 1rem 0 0;
 }
 
 .thumbCarouselItem {

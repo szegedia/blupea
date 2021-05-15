@@ -7,12 +7,8 @@ import 'react-multi-carousel/lib/styles.css'
 
 const ThumbCarousel = ({ projectsData, currentIndex, onChange }) => {
   const thumbnail = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 4
-    },
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 4000, min: 1024 },
       items: 4
     },
     tablet: {
@@ -21,8 +17,36 @@ const ThumbCarousel = ({ projectsData, currentIndex, onChange }) => {
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 2
+      items: 1
     }
+  }
+
+  const CustomButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
+    const { carouselState: { currentSlide, totalItems } } = rest
+    return (
+      <div className="flex items-center justify-center mt-10">
+        <button
+          type="button"
+          className="cta"
+          onClick={previous}
+          disabled={currentSlide === 0}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+        </button>
+        <button
+          type="button"
+          className="cta"
+          onClick={next}
+          disabled={currentSlide === totalItems}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </button>
+      </div>
+    );
   }
 
   return (
@@ -31,6 +55,10 @@ const ThumbCarousel = ({ projectsData, currentIndex, onChange }) => {
       draggable={false}
       responsive={thumbnail}
       itemClass={styles.sliderImageItem}
+      containerClass={styles.thumbCarousel}
+      arrows={false}
+      customButtonGroup={<CustomButtonGroup />}
+      renderButtonGroupOutside
     >
       {projectsData.map((project, index) => {
         const fluid = project.images[0]
@@ -46,7 +74,7 @@ const ThumbCarousel = ({ projectsData, currentIndex, onChange }) => {
             }}
             className={classNames(styles.thumbCarouselItem, {
               'opacity-100': currentIndex === index,
-              'opacity-25': currentIndex !== index
+              'opacity-50': currentIndex !== index
             })}
           >
             <Img fluid={fluid} className={styles.thumbCarouselImage} />

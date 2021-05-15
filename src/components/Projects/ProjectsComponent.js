@@ -16,7 +16,7 @@ const ProjectsComponent = () => {
 
   return (
     <Layout name="projects">
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row mb-8">
         <section className="lg:w-1/3 lg:px-24">
           <p className="font-thin text-3xl text-gray-400 mb-4">{orderNumber}</p>
           <h3>{currentProject.title}</h3>
