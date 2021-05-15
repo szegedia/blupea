@@ -1,27 +1,43 @@
-import { graphql } from "gatsby"
 import * as React from 'react'
-import Carousel from 'react-multi-carousel'
-import 'react-multi-carousel/lib/styles.css'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import AliceCarousel from 'react-alice-carousel'
 import Layout from '@components/Layout/LayoutComponent'
-import styles from './Welcome.module.css'
+// import styles from './Welcome.module.css'
+import 'react-alice-carousel/lib/alice-carousel.css'
 
-const WelcomeComponent = ({ images }) => {
-  const carouselRef = React.useRef()
-  const resetAutoplay = () => {
-    clearInterval(carouselRef.current.autoPlay)
-    carouselRef.current.autoPlay = setInterval(carouselRef.current.next, carouselRef.current.props.autoPlaySpeed)
-  }
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 4000, min: 1024 },
-      items: 1,
-      partialVisibilityGutter: 100,
-    },
-    mobile: {
-      breakpoint: { max: 1024, min: 0 },
-      items: 1
+const WelcomeComponent = () => {
+  const carouselRef = React.useRef(null)
+  const data = useStaticQuery(graphql`
+    query Images {
+      allFile(filter: {relativeDirectory: {eq: "main"}}) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fluid {
+                srcSet
+                src
+                aspectRatio
+              }
+            }
+          }
+        }
+      }
     }
-  };
+  `)
+
+  const items = data.allFile.edges.map(({ node }) => (
+    <Img fluid={node.childImageSharp.fluid} />
+  ))
+
+  const handleNavClick = (direction) => {
+    if (direction === 'prev') {
+      carouselRef.current.slidePrev()
+    } else {
+      carouselRef.current.slideNext()
+    }
+  }
 
   return (
     <Layout className="flex flex-col relative w-full mt-8 md:items-end md:mt-40">
@@ -37,28 +53,32 @@ const WelcomeComponent = ({ images }) => {
           Create a project
         </button>
       </section>
-      <section className="md:w-2/3">
-        {images?.length && (
-          <Carousel
-            ref={el => carouselRef.current = el}
-            responsive={responsive}
-            autoPlaySpeed={5000}
-            itemClass={styles.mainSliderImageItem}
-            removeArrowOnDeviceType={['tablet', 'mobile']}
-            additionalTransfrom={-80}
-            beforeChange={resetAutoplay}
-            partialVisible
-            arrows={false}
-            showDots
-            autoPlay
-            infinite
-            focusOnSelect
-          >
-            {images.map((image, index) => (
-              <img key={`welcome-${index}`} src={image} title={index} alt="" />
-            ))}
-          </Carousel>
-        )}
+      <section className="md:w-2/3 relative">
+        <AliceCarousel
+          ref={el => carouselRef.current = el}
+          autoPlay
+          autoPlayStrategy="all"
+          autoPlayInterval={5000}
+          animationDuration={2000}
+          animationType="fadeout"
+          infinite
+          touchTracking={false}
+          disableDotsControls
+          disableButtonsControls
+          items={items}
+        />
+        <div className="absolute right-0 bottom-0 flex">
+          <button type="button" className="cta is-filled" onClick={() => handleNavClick('prev')}>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+          </button>
+          <button type="button" className="cta is-filled" onClick={() => handleNavClick('next')}>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+        </div>
       </section>
     </Layout>
   )

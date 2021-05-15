@@ -1,14 +1,11 @@
-.sliderImageItem{
-  @apply outline-none;
-  margin: 0 1rem;
-  cursor: pointer;
-}
-
-.mainSliderImageItem {
-  height: 100%;
-  margin: 0 1rem 0 0;
-}
-
-.mainCarousel {
+.mainCarouselItem {
   height: 35rem;
+}
+
+.thumbCarouselItem {
+  margin: 0 1rem;
+}
+
+.thumbCarouselImage {
+  height: 15rem;
 }
