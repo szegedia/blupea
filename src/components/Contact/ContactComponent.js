@@ -10,7 +10,8 @@ const ContactComponent = () => {
   return (
     <Layout name="contact" className="flex items-center justify-center py-60">
       <section className="lg:w-1/2 lg:mx-auto">
-        <h3>Let's talk about your project!</h3>
+        <h3>Beszéljünk az ötleteidről!</h3>
+        <h5 className="mb-8">Keress minket bizalommal, hogy megvalósíthassuk az elképzeléseidet.</h5>
         <form className="form" onSubmit={handleSubmit}>
           <div className="flex flex-col sm:flex-row">
             <div className="form-item">
@@ -18,6 +19,7 @@ const ContactComponent = () => {
                 type="text"
                 name="name"
                 placeholder="név"
+                required
               />
             </div>
 
@@ -26,6 +28,7 @@ const ContactComponent = () => {
                 type="email"
                 name="email"
                 placeholder="e-mail"
+                required
               />
             </div>
 
@@ -44,10 +47,11 @@ const ContactComponent = () => {
               id="message"
               name="message"
               rows="6"
+              required
             />
           </div>
 
-          <button type="submit" className="cta">Send Request</button>
+          <button type="submit" className="cta">Küldés</button>
         </form>
       </section>
     </Layout>

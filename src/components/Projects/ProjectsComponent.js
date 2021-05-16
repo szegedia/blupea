@@ -3,15 +3,13 @@ import classNames from 'classnames'
 import Layout from '@components/Layout/LayoutComponent'
 import styles from './Projects.module.css'
 import useProjects from './useProject'
-import 'react-alice-carousel/lib/alice-carousel.css'
-import CarouselContext from './CarouselContext'
 import MainCarousel from './MainCarousel'
 import ThumbCarousel from './ThumbCarousel'
 
 const ProjectsComponent = () => {
   const { projectsData } = useProjects()
   const [mainIndex, setMainIndex] = React.useState(0)
-  const currentProject = React.useMemo(() => projectsData[mainIndex], [mainIndex])
+  const currentProject = React.useMemo(() => projectsData[mainIndex], [projectsData, mainIndex])
   const orderNumber = `0${mainIndex + 1}`.slice(-2)
 
   return (

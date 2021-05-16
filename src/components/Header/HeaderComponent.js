@@ -45,6 +45,7 @@ const HeaderComponent = () => {
             <Link
               className="header-navlink"
               to="projects"
+              offset={-100}
               smooth
               spy
             >
@@ -55,6 +56,7 @@ const HeaderComponent = () => {
             <Link
               className="header-navlink"
               to="contact"
+              offset={100}
               smooth
               spy
             >

@@ -9,10 +9,11 @@ const useProjects = () => {
           node {
             relativeDirectory
             childImageSharp {
-              fluid {
+              fluid(quality: 100, maxWidth: 2400) {
                 srcSet
                 src
                 aspectRatio
+                ...GatsbyImageSharpFluid
               }
             }
           }

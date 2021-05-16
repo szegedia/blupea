@@ -3,6 +3,8 @@ const path = require('path')
 module.exports = {
   siteMetadata: {
     title: "blupea",
+    siteUrl: "http://bluepea.hu",
+    description: "bluepea lakberendzés",
   },
   plugins: [
     'gatsby-plugin-postcss',
