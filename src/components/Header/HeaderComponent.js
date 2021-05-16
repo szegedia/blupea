@@ -16,7 +16,7 @@ const HeaderComponent = () => {
   }
 
   return (
-    <nav className="fixed z-10 top-0 flex flex-wrap items-center justify-between w-full p-4 bg-white bg-opacity-75 lg:px-12 lg:py-6">
+    <nav className="fixed z-20 top-0 flex flex-wrap items-center justify-between w-full p-4 bg-white bg-opacity-75 lg:px-12 lg:py-6">
       <a href="#home" className="font-brand text-3xl" onClick={handleScrollTop}>blupea</a>
       <button
         className="lg:hidden w-5"
