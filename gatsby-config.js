@@ -1,13 +1,13 @@
-const path = require('path')
+const path = require("path");
 
 module.exports = {
   siteMetadata: {
     title: "blupea",
-    siteUrl: "http://bluepea.hu",
-    description: "bluepea lakberendzés",
+    siteUrl: "http://blupea.hu",
+    description: "blupea lakberendzés",
   },
   plugins: [
-    'gatsby-plugin-postcss',
+    "gatsby-plugin-postcss",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
@@ -29,18 +29,18 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
-          '@src': path.resolve(__dirname, 'src'),
-          '@components': path.resolve(__dirname, 'src/components')
+          "@src": path.resolve(__dirname, "src"),
+          "@components": path.resolve(__dirname, "src/components"),
         },
-        extensions: []
-      }
+        extensions: [],
+      },
     },
     {
-      resolve: 'gatsby-plugin-i18n',
-      options: {        
-        langKeyDefault: 'hu',
-        useLangKeyLayout: false
-      }
-    }
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyDefault: "hu",
+        useLangKeyLayout: false,
+      },
+    },
   ],
 };
