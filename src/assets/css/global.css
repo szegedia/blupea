@@ -4,85 +4,124 @@
 
 @layer base {
   @font-face {
-    font-family: 'MuseoModerno';
+    font-family: "MuseoModerno";
     font-style: normal;
     font-weight: 200;
-    src: local(''),
-         url('../fonts/museomoderno-v2-latin-200.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/museomoderno-v2-latin-200.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    src: local(""),
+      url("../fonts/museomoderno-v2-latin-200.woff2") format("woff2"),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("../fonts/museomoderno-v2-latin-200.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
-
+  /* spartan-100 - latin-ext_latin */
   @font-face {
-    font-family: 'Spartan';
+    font-family: "Spartan";
+    font-style: normal;
+    font-weight: 100;
+    src: local(""),
+      url("../fonts/spartan-v7-latin-ext_latin-100.woff2") format("woff2"),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("../fonts/spartan-v7-latin-ext_latin-100.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* spartan-200 - latin-ext_latin */
+  @font-face {
+    font-family: "Spartan";
+    font-style: normal;
+    font-weight: 200;
+    src: local(""),
+      url("../fonts/spartan-v7-latin-ext_latin-200.woff2") format("woff2"),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("../fonts/spartan-v7-latin-ext_latin-200.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* spartan-300 - latin-ext_latin */
+  @font-face {
+    font-family: "Spartan";
+    font-style: normal;
+    font-weight: 300;
+    src: local(""),
+      url("../fonts/spartan-v7-latin-ext_latin-300.woff2") format("woff2"),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("../fonts/spartan-v7-latin-ext_latin-300.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* spartan-regular - latin-ext_latin */
+  @font-face {
+    font-family: "Spartan";
     font-style: normal;
     font-weight: 400;
-    src: local(''),
-         url('../fonts/spartan-v2-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/spartan-v2-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    src: local(""),
+      url("../fonts/spartan-v7-latin-ext_latin-regular.woff2") format("woff2"),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("../fonts/spartan-v7-latin-ext_latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
-
+  /* spartan-500 - latin-ext_latin */
   @font-face {
-    font-family: 'Spartan';
+    font-family: "Spartan";
     font-style: normal;
     font-weight: 500;
-    src: local(''),
-         url('../fonts/spartan-v2-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/spartan-v2-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    src: local(""),
+      url("../fonts/spartan-v7-latin-ext_latin-500.woff2") format("woff2"),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("../fonts/spartan-v7-latin-ext_latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
-
+  /* spartan-600 - latin-ext_latin */
   @font-face {
-    font-family: 'Spartan';
+    font-family: "Spartan";
     font-style: normal;
     font-weight: 600;
-    src: local(''),
-         url('../fonts/spartan-v2-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/spartan-v2-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    src: local(""),
+      url("../fonts/spartan-v7-latin-ext_latin-600.woff2") format("woff2"),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("../fonts/spartan-v7-latin-ext_latin-600.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
-
+  /* spartan-700 - latin-ext_latin */
   @font-face {
-    font-family: 'Spartan';
+    font-family: "Spartan";
     font-style: normal;
     font-weight: 700;
-    src: local(''),
-         url('../fonts/spartan-v2-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/spartan-v2-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    src: local(""),
+      url("../fonts/spartan-v7-latin-ext_latin-700.woff2") format("woff2"),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("../fonts/spartan-v7-latin-ext_latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
-
+  /* spartan-800 - latin-ext_latin */
   @font-face {
-    font-family: 'Spartan';
+    font-family: "Spartan";
     font-style: normal;
     font-weight: 800;
-    src: local(''),
-         url('../fonts/spartan-v2-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/spartan-v2-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    src: local(""),
+      url("../fonts/spartan-v7-latin-ext_latin-800.woff2") format("woff2"),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("../fonts/spartan-v7-latin-ext_latin-800.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
-
+  /* spartan-900 - latin-ext_latin */
   @font-face {
-    font-family: 'Spartan';
+    font-family: "Spartan";
     font-style: normal;
     font-weight: 900;
-    src: local(''),
-         url('../fonts/spartan-v2-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/spartan-v2-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    src: local(""),
+      url("../fonts/spartan-v7-latin-ext_latin-900.woff2") format("woff2"),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("../fonts/spartan-v7-latin-ext_latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
-
   html {
     @apply text-primary;
   }
 
   h1 {
-    @apply mb-8 text-5xl font-extrabold leading-snug;
+    @apply mb-8 text-3xl font-extrabold leading-snug md:text-5xl;
   }
 
   h3 {
-    @apply mb-5 text-3xl font-bold leading-snug;
+    @apply mb-5 text-xl font-bold leading-snug md:text-3xl;
   }
 }
 
-
 @layer components {
   .cta {
-    @apply bg-white border border-gray-800 px-24 py-6 font-semibold uppercase w-full text-center focus:outline-none sm:w-auto disabled:opacity-75;
+    @apply border border-gray-800 px-16 md:px-24 py-6 font-semibold uppercase w-full text-center focus:outline-none sm:w-auto disabled:opacity-75;
+  }
+
+  .cta-black {
+    @apply bg-black text-white px-16 md:px-24 py-6 font-semibold uppercase w-full text-center focus:outline-none sm:w-auto disabled:opacity-75;
   }
 
   .form-item {
@@ -93,7 +132,7 @@
     @apply w-full py-2 border-b border-gray-300 placeholder-gray-400 focus:outline-none focus:border-gray-500;
   }
 
-  .form-item textarea  {
+  .form-item textarea {
     @apply w-full p-4 border border-gray-300 resize-none focus:outline-none focus:border-gray-500;
   }
 

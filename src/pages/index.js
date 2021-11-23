@@ -1,17 +1,19 @@
-import * as React from 'react'
-import { Helmet } from 'react-helmet'
-import { graphql, useStaticQuery } from 'gatsby'
-import Header from '@components/Header/HeaderComponent'
-import Welcome from '@components/Welcome/WelcomeComponent'
-import Projects from '@components/Projects/ProjectsComponent'
-import Contact from '@components/Contact/ContactComponent'
-import Services from '@components/Services/ServicesComponent'
-import '../i18n'
-import '/src/assets/css/global.css'
+import * as React from "react";
+import { Helmet } from "react-helmet";
+import { graphql, useStaticQuery } from "gatsby";
+import Header from "@components/Header/HeaderComponent";
+import Welcome from "@components/Welcome/WelcomeComponent";
+import Contact from "@components/Contact/ContactComponent";
+import Services from "@components/Services/ServicesComponent";
+import "../i18n";
+import "/src/assets/css/global.css";
+// import Projects from "@components/Projects/ProjectsComponent";
 // import Footer from '@components/Footer/FooterComponent'
 
 const Page = () => {
-  const { site: { siteMetadata }} = useStaticQuery(graphql`
+  const {
+    site: { siteMetadata },
+  } = useStaticQuery(graphql`
     query siteMetaData {
       site {
         siteMetadata {
@@ -20,7 +22,7 @@ const Page = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
@@ -36,11 +38,11 @@ const Page = () => {
 
       <Services />
 
-      <Projects />
-
       <Contact />
-    </>
-  )
-}
 
-export default Page
+      <div className="py-24 text-center text-xs">Minden jog fenntarva.</div>
+    </>
+  );
+};
+
+export default Page;
