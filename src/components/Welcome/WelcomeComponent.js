@@ -54,7 +54,7 @@ const WelcomeComponent = () => {
             />
           ))}
         </Carousel>
-        <section className="2xl:absolute 2xl:top-1/2 2xl:transform 2xl:-translate-y-1/2 2xl:z-10 2xl:w-1/3 p-12 bg-white bg-opacity-75">
+        <section className="xl:absolute xl:top-1/2 xl:transform xl:-translate-y-1/2 xl:z-10 xl:w-1/2 p-12 bg-white bg-opacity-75">
           <h1 className="md:ml-12">Élettelteli otthon tervezése</h1>
           <div className="w-1/3 h-px my-8 bg-gray-400"></div>
           <p className="text-xl leading-normal mb-12 md:ml-12">

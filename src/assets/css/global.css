@@ -136,6 +136,14 @@
     @apply w-full p-4 border border-gray-300 resize-none focus:outline-none focus:border-gray-500;
   }
 
+  input:checked + div {
+    @apply border-gray-900;
+  }
+
+  input:checked + div svg {
+    @apply block;
+  }
+
   .header-navlink {
     @apply block my-2 uppercase font-normal lg:mx-12 lg:my-0 cursor-pointer border-gray-400 hover:border-b;
   }

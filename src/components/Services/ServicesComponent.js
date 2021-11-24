@@ -8,53 +8,44 @@ const ServicesComponent = () => {
       className="flex items-center justify-center py-20 md:py-60 px-10 md:px-0"
     >
       <section className="w-full lg:w-3/4 lg:mx-auto">
-        <h1>Szolgáltatások</h1>
+        <h1 className="mb-16">Szolgáltatások</h1>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
           <div>
             <h3 className="text-2xl">
               <span className="font-thin text-3xl text-gray-400 mr-4">01</span>
-              Vázlatterv
+              Látványtervezés
             </h3>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-            vestibulum purus id sapien tristique accumsan. Curabitur ac sapien
-            sed nibh viverra luctus. Pellentesque semper ipsum non viverra
-            porttitor. Fusce id rutrum velit, sed placerat dolor. Mauris euismod
-            lacus et libero lacinia mattis. Vivamus id ullamcorper ante. Duis
-            elit est, feugiat consequat libero non, auctor malesuada mi. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum
-            purus id sapien tristique accumsan. Curabitur ac sapien sed nibh
-            viverra luctus. Pellentesque semper ipsum non viverra porttitor.
-            Fusce id rutrum velit, sed placerat dolor. Mauris euismod lacus et
-            libero lacinia mattis. Vivamus id ullamcorper ante. Duis elit est,
-            feugiat consequat libero non, auctor malesuada mi.
+            Opcionálisan választható kiegészítő szolgáltatás a belsőépítészeti
+            tervezés vagy az egyedi bútortervezés szolgáltatások mellé. Beltéri
+            látványtervezés az ingatlan főbb helyiségeiről, pontos textúrákkal,
+            felületképzéssel, termék- és színhasználattal, valós
+            fényviszonyoknak megfelelően.
           </div>
 
           <div>
             <h3 className="text-2xl">
               <span className="font-thin text-3xl text-gray-400 mr-4">02</span>
-              Kiviteliterv
+              Egyedi bútortervezés
             </h3>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-            vestibulum purus id sapien tristique accumsan. Curabitur ac sapien
-            sed nibh viverra luctus. Pellentesque semper ipsum non viverra
-            porttitor. Fusce id rutrum velit, sed placerat dolor. Mauris euismod
-            lacus et libero lacinia mattis. Vivamus id ullamcorper ante. Duis
-            elit est, feugiat consequat libero non, auctor malesuada mi. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum
-            purus id sapien tristique accumsan.
+            A megrendelő igényeinek és a helyiség adottságainak megfelelő és
+            funkcionális bútorok tervezése, pontos felületképzés
+            feltüntetésével, anyag- és termék kiírással. Asztalossal
+            egyeztetett, személyreszabott esztétikus megoldások akár az ingatlan
+            minden helyiségébea a tér optimális kihasználásval, a használóira
+            pozitív élettani hatást kifejtve.
           </div>
 
           <div>
             <h3 className="text-2xl">
               <span className="font-thin text-3xl text-gray-400 mr-4">03</span>
-              Művezetés
+              Belsőépítészeti tervezés
             </h3>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-            vestibulum purus id sapien tristique accumsan. Curabitur ac sapien
-            sed nibh viverra luctus. Pellentesque semper ipsum non viverra
-            porttitor. Fusce id rutrum velit, sed placerat dolor. Mauris euismod
-            lacus et libero lacinia mattis. Vivamus id ullamcorper ante. Duis
-            elit est, feugiat consequat libero non, auctor malesuada mi.
+            Összetett, több ütemű tervezési folyamat, amiben minden fázis célja
+            a megrendelő igényeinek megvalósítása, az ingatlan lehetőségeihez
+            mérten a lehető leghatékonyabban, értéknövelő módon. A tervezés
+            végeztével elkészül a szakágakkal egyeztetett teljes kiviteli
+            tervdokumentáció, melyből akadálytalanul megvalósítható a
+            végeredmény.
           </div>
         </div>
       </section>

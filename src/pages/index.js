@@ -5,6 +5,7 @@ import Header from "@components/Header/HeaderComponent";
 import Welcome from "@components/Welcome/WelcomeComponent";
 import Contact from "@components/Contact/ContactComponent";
 import Services from "@components/Services/ServicesComponent";
+import Footer from "@components/Footer/FooterComponent";
 import "../i18n";
 import "/src/assets/css/global.css";
 // import Projects from "@components/Projects/ProjectsComponent";
@@ -40,7 +41,7 @@ const Page = () => {
 
       <Contact />
 
-      <div className="py-24 text-center text-xs">Minden jog fenntarva.</div>
+      <Footer />
     </>
   );
 };
