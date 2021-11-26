@@ -41,9 +41,9 @@ const WelcomeComponent = () => {
         <Carousel
           responsive={responsive}
           autoPlaySpeed={3000}
-          itemClass={styles.mainSliderImageItem}
-          arrows={false}
+          itemClass="w-full"
           draggable={false}
+          arrows={false}
           autoPlay
           infinite
         >
